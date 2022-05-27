@@ -145,7 +145,7 @@ public class BbsDao {
 		return bbs;
 		
 	}
-	public void readount(int seq) {
+	public void readcount(int seq) {
 		String sql=" UPDATE BBS "
 				 + " SET READCOUNT=READCOUNT+1 "
 				 + " WHERE SEQ=? ";
@@ -378,12 +378,12 @@ public class BbsDao {
 		String sql = " SELECT COUNT(*) FROM BBS ";
 		
 		String sWord = "";
-		if(choice.equals("title")) {
-			sWord = "  WHERE TITLE LIKE '%" + search + "%' ";
+		if(choice.equals("title")& !search.equals("")) {
+			sWord = "  WHERE DEL=0 AND TITLE LIKE '%" + search + "%' ";
 		}else if(choice.equals("content")) {
-			sWord = "  WHERE CONTENT LIKE '%" + search + "%' ";
+			sWord = "  WHERE DEL=0 AND CONTENT LIKE '%" + search + "%' ";
 		}else if(choice.equals("writer")) {
-			sWord = "  WHERE ID='" + search + "' ";
+			sWord = "  WHERE DEL=0 AND ID='" + search + "' ";
 		}
 		sql = sql + sWord;
 		

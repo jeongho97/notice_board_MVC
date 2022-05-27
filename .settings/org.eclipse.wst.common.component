@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="project_samples2">
+        
+    <wb-module deploy-name="notice_board_MVC">
+                
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+                
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <property name="context-root" value="project_samples2"/>
-        <property name="java-output-path" value="/project_samples2/build/classes"/>
+                
+        <property name="java-output-path" value="/notice_board_MVC/build/classes"/>
+        <property name="context-root" value="notice_board_MVC"/>
+            
     </wb-module>
+    
 </project-modules>
